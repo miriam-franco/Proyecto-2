@@ -37,7 +37,6 @@ function guardarComercial() {
     let medios = inputMedios.value;
     let formato = inputFormato.value;
     let fecha = inputFecha.value;
-    }
 
     let comercial = new Comercial(
         nombre,
@@ -62,7 +61,7 @@ function guardarComercial() {
     localStorage.setItem("comerciales", JSON.stringify(comerciales));
     console.log("Entra funcion guardar comercial");
     mostrarComerciales();
-
+}
 function borrarTodo() {
     console.log("Entra función borrar todo");
     localStorage.clear();
@@ -100,12 +99,17 @@ function mostrarComerciales() {
         </div>`;
     } else {
         divComerciales.innerHTML = "";
-        comerciales.forEach((comercial, index) => {
+        comerciales.forEach(({nombre, version, duracion, medios, formato, fecha}, index) => {
             divComerciales.innerHTML += `
             <tr>
-            <td> ${comercial.index}</td>
-            <td> ${comercial.nombre}</td>
-              
+            <td> ${nombre}</td>
+            <td> ${version}</td>
+            <td> ${duracion}</td>
+            <td> ${medios}</td>
+            <td> ${formato}</td>
+            <td> ${fecha}</td>
+            <td><button class="btn btn-warning" onclick="editarComercial(${index})">Editar</button></td>
+                <td><button class="btn btn-danger"  onclick="eliminarComercial(${index})">Borrar</button></td>  
             </tr>    
             `;
         });
