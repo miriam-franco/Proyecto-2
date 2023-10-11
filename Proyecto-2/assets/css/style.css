@@ -1,0 +1,39 @@
+*{
+  background-color: transparent;
+}
+
+header {
+    background-color: rgb(0, 0, 1);
+    color: rgb(37, 20, 161);
+    padding: 8px;
+}
+nav {
+    display: flex;
+    justify-content: left; /*alineaciÃ³n horizontal*/
+    align-items: center; /*alineaciÃ³n vertical*/
+}
+
+nav a {
+    color: rgb(251, 239, 240);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.hero-banner {
+    color: rgb(237, 233, 237);
+    height: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    align-items: center;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230618/pngtree-elegant-texture-background-with-graceful-grey-and-white-lines-3d-rendered-image_3635918.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    padding: 80px;
+}
+footer { /*pie de pagina*/
+    background-color: rgb(242, 73, 17);
+    color: rgb(251, 251, 241);
+    padding: 2px; /*distancia del texto en la altura*/
+    text-align: center;
+}
