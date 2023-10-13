@@ -67,7 +67,7 @@ function borrarTodo() {
     localStorage.clear();
     comerciales = [];
     mostrarComerciales();
-    alert("se borraron todos los datos");
+    alert("ATENCIÓN, SE BORRARON TODOS LOS DATOS");
 }
 
 function editarComercial(index) {
