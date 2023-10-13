@@ -8,12 +8,34 @@ header { /*caja del menu superior */
     padding: 4px;
 }
 nav {
-    background-color: (black);
+    background-color: (rgb(7, 7, 7));
+    display: none;
     display: flex;
     justify-content:left; /*alineaciÃ³n horizontal*/
     align-items: center; /*alineaciÃ³n vertical*/
 }
 
+.menu_H{
+    display: none; 
+}
+
+@media (max-width: 500px) {
+    nav {
+        display: none;
+    }
+    .menu_H{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:black;
+    }
+    .image_H{
+        background-color: black;
+        width: 15px;
+        height: 15px;
+        background-image: url("../images/lista.png");
+    }
+}
 nav a {
     color: rgb(220, 187, 56);
     text-decoration: none;
